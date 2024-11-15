@@ -1,27 +1,94 @@
-# Angular17JwtAuth
+# Angular 17 JWT Authentication
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+A complete authentication system built with Angular 17 that implements JWT (JSON Web Token) authentication with role-based authorization.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- User registration and login
+- JWT authentication
+- Role-based access control (Admin, Moderator, User)
+- Protected routes
+- HTTP interceptor for handling auth tokens
+- Session storage management
+- Responsive UI with Bootstrap
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js (v16 or higher)
+- Angular CLI (v17.3.0 or higher)
+- A compatible backend server running on `http://localhost:8080`
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository
+2. Install dependencies:
 
-## Running unit tests
+bash
+npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Development Server
 
-## Running end-to-end tests
+Run the development server:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+bash:
+ng serve
 
-## Further help
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Project Structure
+
+- `src/app/_services/` - Authentication and user services
+- `src/app/components/` - Feature components (login, register, profile, etc.)
+- `src/_helpers/` - HTTP interceptor for handling auth tokens
+- `src/app/board-*` - Role-specific components
+
+## Key Components
+
+### Authentication Service
+The auth service handles all authentication-related operations:
+
+typescript:src/app/services/auth.service.ts
+startLine: 18
+endLine: 35
+
+### Storage Service
+Manages user session data:
+
+typescript:src/app/services/storage.service.ts
+startLine: 12
+endLine: 35
+
+## Available Routes
+
+- `/home` - Home page
+- `/login` - Login page
+- `/register` - Registration page
+- `/profile` - User profile
+- `/user` - User board (authenticated users only)
+- `/mod` - Moderator board (moderators only)
+- `/admin` - Admin board (administrators only)
+
+## Security Features
+
+- HTTP-only cookies for token storage
+- Cross-Origin Resource Sharing (CORS) support
+- Protected routes with role-based guards
+- Session management
+- Secure password handling
+
+## Building for Production
+
+Build the project for production:
+
+bash:
+ng build
+
+
+The build artifacts will be stored in the `dist/` directory.
+
+## Running Tests
+
+Execute unit tests:
+
+bash:
+ng test
