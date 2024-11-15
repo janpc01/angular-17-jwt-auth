@@ -39,7 +39,7 @@ Run the development server:
 bash:
 ng serve --port 8081
 
-Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Navigate to `http://localhost:8081/`. The application will automatically reload if you change any of the source files.
 
 ## Project Structure
 
