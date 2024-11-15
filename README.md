@@ -23,7 +23,7 @@ A complete authentication system built with Angular 17 that implements JWT (JSON
 1. Clone the repository
 2. Install dependencies:
 
-bash
+bash:
 npm install
 
 ## Development Server
