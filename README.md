@@ -25,13 +25,19 @@ A complete authentication system built with Angular 17 that implements JWT (JSON
 
 bash:
 npm install
+npm install bootstrap (not sure if this is needed)
+
+## Run the backend server
+
+1. Clone this repository: https://github.com/janpc01/mean-authentication-authorization
+2. Run backend server from backend directory: node server.js
 
 ## Development Server
 
 Run the development server:
 
 bash:
-ng serve
+ng serve --port 8081
 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
